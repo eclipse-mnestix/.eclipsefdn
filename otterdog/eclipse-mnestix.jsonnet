@@ -6,7 +6,6 @@ orgs.newOrg('eclipse-mnestix') {
     name: "Eclipse Mnestix AAS Browser ",
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
-      default_workflow_permissions: "read",
     },
   },
 }
