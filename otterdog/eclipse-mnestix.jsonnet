@@ -14,7 +14,7 @@ and easy to use.',
   _repositories+:: [
     orgs.newRepo('mnestix-browser') {
         description: 'Mnestix Browser enables you to easily get started with the AAS and browse through repositories',
-        homepage: 'https://xitaso.com/kompetenzen/mnestix/'
+        homepage: 'https://xitaso.com/kompetenzen/mnestix/',
         allow_merge_commit: true,
         delete_branch_on_merge: true,
         web_commit_signoff_required: false,
