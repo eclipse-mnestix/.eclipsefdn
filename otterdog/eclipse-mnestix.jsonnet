@@ -44,11 +44,6 @@ orgs.newOrg('eclipse-mnestix') {
               value: "mnestix",
             },
         ],
-        secrets+: [
-          orgs.newRepoSecret('REGISTRY_PASS') {
-            value: "bitwarden:6578c4d0-4e6d-4346-9037-b47c3c206c5a@github_docker_secret",
-          },
-        ],
         topics+: [
           'asset-administration-shell',
           'aas',
