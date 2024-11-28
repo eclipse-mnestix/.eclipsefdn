@@ -44,13 +44,6 @@ orgs.newOrg('eclipse-mnestix') {
           'aas',
           'industry40'
         ],
-      allow_merge_commit: true,
-      delete_branch_on_merge: true,
-      web_commit_signoff_required: false,
-      branch_protection_rules+: [
-        orgs.newBranchProtectionRule('main') {},
-        orgs.newBranchProtectionRule('dev') {},
-      ],
     }
   ]
 }
