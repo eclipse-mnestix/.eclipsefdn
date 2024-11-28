@@ -20,30 +20,27 @@ orgs.newOrg('eclipse-mnestix') {
   ],
   _repositories+:: [
     orgs.newRepo('mnestix-browser') {
-        description: 'Mnestix Browser enables you to easily get started with the AAS and browse through repositories',
-        homepage: 'https://xitaso.com/kompetenzen/mnestix/',
-        allow_merge_commit: true,
-        delete_branch_on_merge: true,
-        web_commit_signoff_required: false,
-        branch_protection_rules+: [
-            orgs.newBranchProtectionRule('main') {
-              required_approving_review_count: 2,
-            },
-            orgs.newBranchProtectionRule('staging') {
-              required_approving_review_count: 2,
-            },
-            orgs.newBranchProtectionRule('dev') {
-              required_approving_review_count: 2,
-            },
-        ],
-        workflows+: {
-          default_workflow_permissions: 'write',
+      description: 'Mnestix Browser enables you to easily get started with the AAS and browse through repositories',
+      homepage: 'https://xitaso.com/kompetenzen/mnestix/',
+      allow_merge_commit: true,
+      delete_branch_on_merge: true,
+      web_commit_signoff_required: false,
+      branch_protection_rules+: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 2,
         },
-        topics+: [
-          'asset-administration-shell',
-          'aas',
-          'industry40'
-        ],
+        orgs.newBranchProtectionRule('staging') {
+          required_approving_review_count: 2,
+        },
+        orgs.newBranchProtectionRule('dev') {
+          required_approving_review_count: 2,
+        },
+      ],
+      topics+: [
+        'asset-administration-shell',
+        'aas',
+        'industry40'
+      ],
     }
   ]
 }
