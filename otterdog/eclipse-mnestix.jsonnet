@@ -9,10 +9,10 @@ orgs.newOrg('eclipse-mnestix') {
     },
   },
   secrets: [
-    orgs.newRepoSecret('DOCKER_USERNAME') {
+    orgs.newOrgSecret('DOCKER_USERNAME') {
       value: "pass:bots/dt.mnestix/docker.com/username",
     },
-    orgs.newRepoSecret('DOCKER_API_TOKEN') {
+    orgs.newOrgSecret('DOCKER_API_TOKEN') {
       value: "pass:bots/dt.mnestix/docker.com/api-token",
     },
   ],
