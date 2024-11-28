@@ -51,14 +51,6 @@ orgs.newOrg('eclipse-mnestix') {
         orgs.newBranchProtectionRule('main') {},
         orgs.newBranchProtectionRule('dev') {},
       ],
-      variables+: [
-        orgs.newRepoVariable('AZURE_REGISTRY_USER') {
-          value: "mnestixcr",
-        },
-        orgs.newRepoVariable('REGISTRY_USER') {
-          value: "mnestix",
-        },
-      ]
     }
   ]
 }
