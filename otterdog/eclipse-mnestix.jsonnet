@@ -39,11 +39,6 @@ orgs.newOrg('eclipse-mnestix') {
         workflows+: {
           default_workflow_permissions: 'write',
         },
-        variables+: [
-            orgs.newRepoVariable('REGISTRY_USER') {
-              value: "mnestix",
-            },
-        ],
         topics+: [
           'asset-administration-shell',
           'aas',
