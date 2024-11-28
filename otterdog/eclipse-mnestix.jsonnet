@@ -10,6 +10,14 @@ orgs.newOrg('eclipse-mnestix') {
     email: 'mnestix-dev@eclipse.org',
     blog: 'https://mnestix.io',
   },
+  secrets: [
+    orgs.newOrgSecret('DOCKER_USERNAME') {
+      value: "pass:bots/dt.mnestix/docker.com/username",
+    },
+    orgs.newOrgSecret('DOCKER_API_TOKEN') {
+      value: "pass:bots/dt.mnestix/docker.com/api-token",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('mnestix-browser') {
         description: 'Mnestix Browser enables you to easily get started with the AAS and browse through repositories',
@@ -46,6 +54,21 @@ orgs.newOrg('eclipse-mnestix') {
           'aas',
           'industry40'
         ],
+      allow_merge_commit: true,
+      delete_branch_on_merge: true,
+      web_commit_signoff_required: false,
+      branch_protection_rules+: [
+        orgs.newBranchProtectionRule('main') {},
+        orgs.newBranchProtectionRule('dev') {},
+      ],
+      variables+: [
+        orgs.newRepoVariable('AZURE_REGISTRY_USER') {
+          value: "mnestixcr",
+        },
+        orgs.newRepoVariable('REGISTRY_USER') {
+          value: "mnestix",
+        },
+      ]
     }
   ]
 }
