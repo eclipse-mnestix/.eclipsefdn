@@ -41,6 +41,8 @@ orgs.newOrg('eclipse-mnestix') {
         'aas',
         'industry40'
       ],
-    }
+    },
+
+    orgs.newRepo('.github'), ## added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
   ]
 }
