@@ -45,7 +45,7 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
 
     orgs.newRepo('.github'), ## added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml',
 
-    orgs.newRepo('example-submodel-visualization-coffee-consumption') {
+    orgs.newRepo('mnestix-browser-example-submodel-visualizations') {
       description: 'An example submodel visualization to guide the user in the creation of their own custom visualization. We recommend to use this repository as a template',
       homepage: 'https://github.com/eclipse-mnestix/mnestix-browser/wiki/How-to-create-custom-submodel-visualizations',
       allow_forking: true,
