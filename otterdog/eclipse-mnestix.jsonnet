@@ -3,7 +3,7 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
   settings+: {
     description: 'Mnestix as an open source platform provides an easy way to implement industry usecases using the AAS and helps make this technology easy to use',
-    name: "Eclipse Mnestix AAS Browser ",
+    name: "Eclipse Mnestix",
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
     },
