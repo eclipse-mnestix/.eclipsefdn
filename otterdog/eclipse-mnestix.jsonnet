@@ -43,6 +43,27 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       ],
     },
 
-    orgs.newRepo('.github'), ## added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
+    orgs.newRepo('.github'), ## added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml',
+
+    orgs.newRepo('mnestix-browser-example-submodel-visualizations') {
+      description: 'An example submodel visualization to guide the user in the creation of their own custom visualization. We recommend to use this repository as a template',
+      homepage: 'https://github.com/eclipse-mnestix/mnestix-browser/wiki/How-to-create-custom-submodel-visualizations',
+      allow_forking: true,
+      allow_merge_commit: true,
+      delete_branch_on_merge: true,
+      web_commit_signoff_required: false,
+      is_template: true,
+      branch_protection_rules+: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 2,
+        },
+      ],
+      topics+: [
+        'asset-administration-shell',
+        'aas',
+        'industry40',
+        'custom-submodel'
+      ],
+    },
   ]
 }
