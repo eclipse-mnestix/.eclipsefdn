@@ -34,6 +34,7 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
         },
         orgs.newBranchProtectionRule('dev') {
           required_approving_review_count: 2,
+          allows_force_pushes: true
         },
       ],
       topics+: [
