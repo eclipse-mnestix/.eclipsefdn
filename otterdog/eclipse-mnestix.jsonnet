@@ -18,10 +18,10 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       value: "pass:bots/dt.mnestix/docker.com/api-token",
     },
     orgs.newOrgSecret('TEST_ADMIN_USER_PASSWORD') {
-      value: "pass:bots/dt.mnestix/docker.com/admin-password",
+      value: "********",
     },
     orgs.newOrgSecret('TEST_USER_PASSWORD') {
-      value: "pass:bots/dt.mnestix/docker.com/user-password",
+      value: "********",
     },
   ],
   _repositories+:: [
