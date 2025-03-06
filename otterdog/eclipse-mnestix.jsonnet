@@ -35,9 +35,6 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 2,
         },
-        orgs.newBranchProtectionRule('staging') {
-          required_approving_review_count: 2,
-        },
         orgs.newBranchProtectionRule('dev') {
           required_approving_review_count: 2,
           allows_force_pushes: true
@@ -45,8 +42,15 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       ],
       topics+: [
         'asset-administration-shell',
-        'aas',
-        'industry40'
+        'aasx',
+        'digital-twin-application',
+        'industry40',
+        'industry-40',
+        'iiot',
+        'administration-shell',
+        'digitaltwin',
+        'digitaltwins',
+        'eclipse'
       ],
     },
 
