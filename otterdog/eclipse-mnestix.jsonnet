@@ -54,6 +54,33 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       ],
     },
 
+    orgs.newRepo('mnestix-proxy') {
+      description: 'The Eclipse Mnestix AAS Proxy is currently WIP',
+      homepage: 'https://xitaso.com/en/competences/mnestix/',
+      allow_merge_commit: true,
+      delete_branch_on_merge: true,
+      web_commit_signoff_required: false,
+      branch_protection_rules+: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 2,
+        },
+        orgs.newBranchProtectionRule('dev') {
+          required_approving_review_count: 2,
+          allows_force_pushes: true
+        },
+      ],
+      topics+: [
+        'asset-administration-shell',
+        'industry40',
+        'industry-40',
+        'iiot',
+        'administration-shell',
+        'digitaltwin',
+        'digitaltwins',
+        'eclipse'
+      ],
+    },
+
     orgs.newRepo('.github'), ## added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml',
 
     orgs.newRepo('mnestix-browser-example-submodel-visualizations') {
