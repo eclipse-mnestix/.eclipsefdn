@@ -50,7 +50,36 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
         'administration-shell',
         'digitaltwin',
         'digitaltwins',
-        'eclipse'
+        'eclipse',
+        'mnestix'
+      ],
+    },
+
+    orgs.newRepo('mnestix-proxy') {
+      description: 'The Eclipse Mnestix Proxy selectively exposes and controls access to AAS functionalities and the AAS infrastructure.',
+      homepage: 'https://xitaso.com/en/competences/mnestix/',
+      allow_merge_commit: true,
+      delete_branch_on_merge: true,
+      web_commit_signoff_required: false,
+      branch_protection_rules+: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 2,
+        },
+        orgs.newBranchProtectionRule('dev') {
+          required_approving_review_count: 2,
+          allows_force_pushes: true
+        },
+      ],
+      topics+: [
+        'asset-administration-shell',
+        'industry40',
+        'industry-40',
+        'iiot',
+        'administration-shell',
+        'digitaltwin',
+        'digitaltwins',
+        'eclipse',
+        'mnestix'
       ],
     },
 
@@ -73,7 +102,8 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
         'asset-administration-shell',
         'aas',
         'industry40',
-        'custom-submodel'
+        'custom-submodel',
+        'mnestix'
       ],
     },
   ]
