@@ -30,6 +30,7 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       homepage: 'https://xitaso.com/en/competences/mnestix/',
       allow_merge_commit: true,
       delete_branch_on_merge: true,
+      dependabot_security_updates_enabled: true,
       web_commit_signoff_required: false,
       branch_protection_rules+: [
         orgs.newBranchProtectionRule('main') {
