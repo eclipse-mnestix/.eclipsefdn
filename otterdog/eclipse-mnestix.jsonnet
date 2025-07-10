@@ -36,10 +36,6 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 2,
         },
-        orgs.newBranchProtectionRule('dev') {
-          required_approving_review_count: 2,
-          allows_force_pushes: true
-        },
       ],
       topics+: [
         'asset-administration-shell',
@@ -65,10 +61,6 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       branch_protection_rules+: [
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 2,
-        },
-        orgs.newBranchProtectionRule('dev') {
-          required_approving_review_count: 2,
-          allows_force_pushes: true
         },
       ],
       topics+: [
