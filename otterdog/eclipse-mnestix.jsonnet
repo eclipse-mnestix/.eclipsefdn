@@ -36,12 +36,11 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 2,
           allows_deletions: false,
+          requires_conversation_resolution: true,
         },        
         orgs.newBranchProtectionRule('dev') {
           allows_force_pushes: true,
           allows_deletions: false,
-        },
-        orgs.newBranchProtectionRule('**/**') {
           requires_conversation_resolution: true,
         },
       ],
@@ -70,12 +69,11 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 2,
           allows_deletions: false,
+          requires_conversation_resolution: true,
         },        
         orgs.newBranchProtectionRule('dev') {
           allows_force_pushes: true,
           allows_deletions: false,
-        },
-        orgs.newBranchProtectionRule('**/**') {
           requires_conversation_resolution: true,
         },
       ],
