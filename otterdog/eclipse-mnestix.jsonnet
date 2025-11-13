@@ -39,6 +39,7 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
           requires_conversation_resolution: true,
         },        
         orgs.newBranchProtectionRule('dev') {
+          required_approving_review_count: 1,
           allows_force_pushes: true,
           allows_deletions: false,
           requires_conversation_resolution: true,
@@ -72,6 +73,7 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
           requires_conversation_resolution: true,
         },        
         orgs.newBranchProtectionRule('dev') {
+          required_approving_review_count: 1,
           allows_force_pushes: true,
           allows_deletions: false,
           requires_conversation_resolution: true,
