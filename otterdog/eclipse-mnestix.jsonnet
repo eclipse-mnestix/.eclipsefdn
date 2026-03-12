@@ -31,6 +31,7 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       allow_merge_commit: true,
       delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
+      code_scanning_default_setup_enabled: true,
       web_commit_signoff_required: false,
       branch_protection_rules+: [
         orgs.newBranchProtectionRule('main') {
@@ -66,6 +67,7 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       allow_merge_commit: true,
       delete_branch_on_merge: true,
       web_commit_signoff_required: false,
+      code_scanning_default_setup_enabled: true,
       branch_protection_rules+: [
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 2,
@@ -98,6 +100,7 @@ orgs.newOrg('dt.mnestix', 'eclipse-mnestix') {
       allow_merge_commit: true,
       delete_branch_on_merge: true,
       web_commit_signoff_required: false,
+      code_scanning_default_setup_enabled: true,
       branch_protection_rules+: [
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 2,
